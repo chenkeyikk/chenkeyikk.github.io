@@ -17,7 +17,7 @@
     --color-gray: #1E1E1E;
 
     --font-display: 'Ma Shan Zheng', 'LXGW WenKai', serif;
-    --font-body: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'LXGW WenKai', 'Noto Sans SC', -apple-system, sans-serif;
     --font-serif: 'LXGW WenKai', Georgia, serif;
 
     --spacing-xs: 8px;
@@ -57,7 +57,7 @@ html {
 }
 
 body {
-    font-family: var(--font-body);
+    font-family: 'LXGW WenKai', 'Noto Sans SC', -apple-system, sans-serif;
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.7;
