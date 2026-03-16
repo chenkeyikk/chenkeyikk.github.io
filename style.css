@@ -1,4 +1,9 @@
 /* ====================
+   字体加载
+   LXGW WenKai 需要用户本地安装，否则降级到 Noto Sans SC
+   ==================== */
+
+/* ====================
    CSS Variables
    ==================== */
 :root {
@@ -16,9 +21,9 @@
     --color-orange-glow: rgba(255, 159, 67, 0.25);
     --color-gray: #1E1E1E;
 
-    --font-display: 'Ma Shan Zheng', 'LXGW WenKai', serif;
-    --font-body: 'LXGW WenKai', 'Noto Sans SC', -apple-system, sans-serif;
-    --font-serif: 'LXGW WenKai', Georgia, serif;
+    --font-display: 'Ma Shan Zheng', cursive;
+    --font-body: 'Kaiti SC', 'STKaiti', 'KaiTi', 'Microsoft YaHei', serif;
+    --font-serif: 'Kaiti SC', 'STKaiti', 'KaiTi', serif;
 
     --spacing-xs: 8px;
     --spacing-sm: 16px;
@@ -57,7 +62,7 @@ html {
 }
 
 body {
-    font-family: 'LXGW WenKai', 'Noto Sans SC', -apple-system, sans-serif;
+    font-family: 'Kaiti SC', 'STKaiti', 'KaiTi', 'Microsoft YaHei', serif;
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.7;
@@ -284,7 +289,7 @@ body {
 .name {
     font-family: var(--font-display);
     font-size: 2.2rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-text);
     margin-bottom: 6px;
     letter-spacing: 4px;
@@ -302,7 +307,7 @@ body {
 }
 
 .subtitle {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: var(--color-text-secondary);
     font-weight: 400;
     letter-spacing: 1px;
@@ -317,7 +322,7 @@ body {
 }
 
 .header-tag {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--color-text-secondary);
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--color-border);
@@ -364,10 +369,10 @@ body {
 }
 
 .stat-number {
-    font-family: var(--font-display);
+    font-family: 'Abril Fatface', cursive;
     display: block;
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-pink);
     line-height: 1.1;
     margin-bottom: 8px;
@@ -391,7 +396,7 @@ body {
 }
 
 .stat-label {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     color: var(--color-text-secondary);
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -403,7 +408,7 @@ body {
 .section-title {
     font-family: var(--font-display);
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-text);
     margin-bottom: var(--spacing-lg);
     padding-bottom: var(--spacing-sm);
@@ -429,7 +434,7 @@ body {
 }
 
 .about-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--color-text-secondary);
     line-height: 1.9;
     max-width: 900px;
@@ -474,7 +479,7 @@ body {
 .category-header h3 {
     font-family: var(--font-display);
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-text);
     letter-spacing: 2px;
 }
@@ -607,7 +612,7 @@ body {
 .project-title {
     font-family: var(--font-display);
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-text);
     margin-bottom: var(--spacing-sm);
     line-height: 1.4;
@@ -615,7 +620,7 @@ body {
 }
 
 .project-desc {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: var(--color-text-secondary);
     line-height: 1.7;
     margin-bottom: var(--spacing-sm);
@@ -623,7 +628,7 @@ body {
 
 .project-partner {
     font-size: 0.85rem;
-    color: var(--color-text-muted);
+    color: var(--color-text);
     margin-bottom: var(--spacing-sm);
     display: flex;
     align-items: center;
@@ -644,7 +649,7 @@ body {
 
 .tech-tag {
     font-size: 0.75rem;
-    color: var(--color-text-muted);
+    color: var(--color-text);
     background: rgba(255, 255, 255, 0.05);
     padding: 4px 10px;
     border-radius: 4px;
@@ -673,7 +678,7 @@ body {
 }
 
 .contact-info {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-md);
 }
