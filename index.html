@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈柯屹 - 背景提升项目展示</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=LXGW+WenKai:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">陈柯屹</a>
+            <ul class="navbar-menu">
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#welfare">社会公益</a></li>
+                <li><a href="#practice">艺术实践</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+            <button class="navbar-toggle" aria-label="菜单">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-background">
+            <div class="header-gradient"></div>
+            <div class="header-pattern"></div>
+        </div>
+        <div class="header-content">
+            <div class="header-photo">
+                <div class="photo-frame">
+                    <img src="images/profile.jpg" alt="陈柯屹职业照">
+                </div>
+            </div>
+            <div class="header-info">
+                <h1 class="name">陈柯屹</h1>
+                <p class="subtitle">曼彻斯特大学教育领导力硕士</p>
+                <div class="header-tags">
+                    <span class="header-tag">教育管理</span>
+                    <span class="header-tag">项目策划</span>
+                    <span class="header-tag">艺术公益</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" id="stat-total">14</span>
+                    <span class="stat-label">项目总数</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="stat-welfare">7</span>
+                    <span class="stat-label">公益项目</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="stat-practice">7</span>
+                    <span class="stat-label">实践项目</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="stat-partners">10</span>
+                    <span class="stat-label">合作机构</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <p class="about-text">
+                英国曼彻斯特大学教育领导力硕士，拥有 3 年教育行业经验。<br>
+                曾任新东方斯芬克深圳校区背提项目负责人，从 0 到 1 架构并交付 10+ 原创赛事活动，链接 20+ 合作伙伴。<br>
+                热衷于在公益服务与艺术设计中寻找平衡点，以专业的项目管理能力，驱动具有社会责任感的跨界实践。
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">项目介绍</h2>
+            <div id="projects-container"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <h2 class="footer-title">联系我</h2>
+            <p class="contact-info">邮箱: chenkeyikk@163.com</p>
+            <p class="copyright">© 2024-2025 深圳斯芬克国际艺术教育背景提升项目</p>
+        </div>
+    </footer>
+
+    <!-- 图片调整面板 -->
+    <div id="image-adjust-panel" class="adjust-panel" style="display: none;">
+        <div class="adjust-panel-header">
+            <h3>图片位置调整</h3>
+            <button onclick="toggleAdjustPanel()" class="adjust-close">×</button>
+        </div>
+        <div class="adjust-panel-body">
+            <div class="adjust-controls">
+                <label>项目：<select id="adjust-project" onchange="updateAdjustPreview()"></select></label>
+                <label>图片：<select id="adjust-image" onchange="updateAdjustPreview()"></select></label>
+                <label>水平位置：
+                    <input type="range" id="adjust-x" min="0" max="100" value="50" onchange="applyAdjustment()">
+                    <span id="adjust-x-val">50%</span>
+                </label>
+                <label>垂直位置：
+                    <input type="range" id="adjust-y" min="0" max="100" value="50" onchange="applyAdjustment()">
+                    <span id="adjust-y-val">50%</span>
+                </label>
+            </div>
+            <div class="adjust-preview" id="adjust-preview"></div>
+            <div class="adjust-output">
+                <h4>配置代码：</h4>
+                <textarea id="adjust-code" readonly></textarea>
+                <button onclick="copyAdjustCode()">复制代码</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 调整面板开关按钮 -->
+    <button id="adjust-toggle-btn" onclick="toggleAdjustPanel()" title="图片调整">⚙️</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
