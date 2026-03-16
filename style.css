@@ -16,7 +16,7 @@
     --color-orange-glow: rgba(255, 159, 67, 0.25);
     --color-gray: #1E1E1E;
 
-    --font-display: 'LXGW WenKai', 'Playfair Display', serif;
+    --font-display: 'Ma Shan Zheng', 'LXGW WenKai', serif;
     --font-body: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-serif: 'LXGW WenKai', Georgia, serif;
 
@@ -339,19 +339,19 @@ body {
    ==================== */
 .stats-section {
     background: var(--color-bg-secondary);
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-md) 0;
     border-bottom: 1px solid var(--color-border);
 }
 
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: var(--spacing-lg);
+    gap: var(--spacing-sm);
 }
 
 .stat-item {
     text-align: center;
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
     background: rgba(255, 255, 255, 0.02);
     border-radius: var(--border-radius);
     border: 1px solid transparent;
@@ -417,13 +417,21 @@ body {
    ==================== */
 .about {
     background: var(--color-bg);
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-lg) 0;
+}
+
+.about .section-title {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-md);
+    border-bottom: none;
+    padding-bottom: 0;
+    color: var(--color-text-secondary);
 }
 
 .about-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--color-text-secondary);
-    line-height: 2;
+    line-height: 1.9;
     max-width: 900px;
     letter-spacing: 0.5px;
 }
@@ -432,7 +440,7 @@ body {
    Timeline Section
    ==================== */
 .timeline-section {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
 }
 
 .category-header {
