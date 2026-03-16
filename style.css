@@ -940,8 +940,10 @@ body {
         font-size: 1.3rem;
     }
 
-    .project-image {
-        height: 240px;
+    .project-images-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 100px);
+        height: 208px;
     }
 
     .project-info {
@@ -982,7 +984,9 @@ body {
     }
 
     .project-images-grid {
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(2, 80px);
+        height: 168px;
     }
 
     .stats-grid {
